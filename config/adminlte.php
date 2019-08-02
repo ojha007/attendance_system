@@ -95,56 +95,20 @@ return [
 
     'register_url' => 'register',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Menu Items
-    |--------------------------------------------------------------------------
-    |
-    | Specify your menu items to display in the left sidebar. Each menu item
-    | should have a text and and a URL. You can also specify an icon from
-    | Font Awesome. A string instead of an array represents a header in sidebar
-    | layout. The 'can' is a filter on Laravel's built in Gate functionality.
-    |
-    */
-
     'menu' => [
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',
             'url' => 'profile',
             'icon' => 'user',
+            'role'=>['teacher','student']
         ],
         [
             'text' => 'Change Password',
-            'url' => 'settings',
+            'url' => '/change/password',
             'icon' => 'lock',
+            'role'=>['teacher','admin','student']
         ],
-        'MAIN NAVIGATION',
-        [
-            'text' => 'Blog',
-            'url' => 'blog',
-            'can' => 'manage-blog',
-        ],
-        [
-            'text' => 'Pages',
-            'url' => 'admin/pages',
-            'icon' => 'file',
-            'label' => 4,
-            'label_color' => 'success',
-        ],
-//        'LABELS',
-//        [
-//            'text'       => 'Important',
-//            'icon_color' => 'red',
-//        ],
-//        [
-//            'text'       => 'Warning',
-//            'icon_color' => 'yellow',
-//        ],
-//        [
-//            'text'       => 'Information',
-//            'icon_color' => 'aqua',
-//        ],
     ],
 
     /*
