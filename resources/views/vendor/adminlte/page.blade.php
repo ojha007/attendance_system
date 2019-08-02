@@ -114,6 +114,22 @@
                         @if(auth()->user()->is('student'))
                             <li class="header text-center"><h5>My Attendance</h5></li>
                         @endif
+
+                        @if(auth()->user()->is('admin'))
+                            <li class="header text-center"><h5>Verify</h5></li>
+                            <li>
+                                <a href="{{route('verify.student')}}">
+                                    <span class="fa fa-user-circle "></span>
+                                    <span class="headline">Teacher</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('verify.teacher')}}">
+                                    <span class="fa fa-user-circle"></span>
+                                    <span class="headline">Student</span>
+                                </a>
+                            </li>
+                        @endif
                     </ul>
 
                 </section>
