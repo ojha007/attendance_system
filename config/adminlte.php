@@ -182,10 +182,10 @@ return [
         'datatables' => true,
         'select2' => true,
         'chartjs' => true,
-        'sweetAlert2'=>true,
+        'sweetAlert'=>true,
         'ckeditor'=> true,
-        'timepicker'=>true,
-        'datepicker'=> true,
+        'bootstrap-timepicker'=>true,
+        'bootstrap-datepicker'=> true,
         ]
 
 ];

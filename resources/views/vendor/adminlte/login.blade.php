@@ -9,6 +9,9 @@
 @section('body_class', 'login-page')
 
 @section('body')
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=2075466702771896&autoLogAppEvents=1"></script>
     <div class="login-box">
         <div class="login-logo">
             <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}">
@@ -53,7 +56,13 @@
                         <button type="submit"
                                 class="btn btn-primary btn-block btn-flat">{{ trans('adminlte::adminlte.sign_in') }}</button>
                     </div>
+
                     <!-- /.col -->
+                </div>
+                <h4 class="text-center">OR</h4>
+                <div class="row text-center">
+                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
+                         data-auto-logout-link="false" data-use-continue-as="false"></div>
                 </div>
             </form>
             <div class="auth-links">
