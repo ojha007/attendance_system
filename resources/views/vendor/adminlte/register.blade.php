@@ -59,6 +59,19 @@
                         </span>
                     @endif
                 </div>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input iradio_square-blue" name="role" id="teacher" value="1">
+                        I am Teacher
+                    </label>
+                </div>
+                <div class="divider"></div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="role" id="student" value="2">
+                        I am Student
+                    </label>
+                </div>
                 <button type="submit"
                         class="btn btn-primary btn-block btn-flat"
                 >{{ trans('adminlte::adminlte.register') }}</button>
