@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'Samajik college Attendance Management system',
+    'title' => 'Samajik college',
 
     'title_prefix' => '',
 
@@ -111,12 +111,12 @@ return [
         'MAIN NAVIGATION',
         [
             'text' => 'Blog',
-            'url'  => 'admin/blog',
+            'url'  => '/blog',
             'can'  => 'manage-blog',
         ],
         [
             'text'        => 'Pages',
-            'url'         => 'admin/pages',
+            'url'         => 'pages',
             'icon'        => 'file',
             'label'       => 4,
             'label_color' => 'success',
