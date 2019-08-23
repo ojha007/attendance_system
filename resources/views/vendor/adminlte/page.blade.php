@@ -32,11 +32,6 @@
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
-                            <ul class="nav navbar-nav">
-                                @each('adminlte::partials.menu-item-top-nav', $adminlte->menu(), 'item')
-                            </ul>
-                        </div>
                         <!-- /.navbar-collapse -->
                     @else
                         <!-- Logo -->
@@ -81,6 +76,7 @@
                                         </li>
                                     </ul>
                                 </div>
+                            </nav>
                             @if(config('adminlte.layout') == 'top-nav')
                     </div>
                     @endif
@@ -112,14 +108,14 @@
                             </a>
                         </li>
                         @if(auth()->user()->is('student'))
-                            <li class="header text-center"><h5>My Attendance</h5></li>
+                            <li class="header text-center skin-blue"><h5>My Attendance</h5></li>
                         @endif
 
                         @if(auth()->user()->is('admin'))
-                            <li class="header text-center"><h5>Verify</h5></li>
+                            <li class="header text-center skin-blue"><h5>Verify</h5></li>
                             <li>
                                 <a href="{{route('verify.student')}}">
-                                    <span class="fa fa-user-circle "></span>
+                                    <span class="fa fa-user-circle"></span>
                                     <span class="headline">Teacher</span>
                                 </a>
                             </li>
@@ -127,6 +123,14 @@
                                 <a href="{{route('verify.teacher')}}">
                                     <span class="fa fa-user-circle"></span>
                                     <span class="headline">Student</span>
+                                </a>
+                            </li>
+                            <li class="header text-center skin-blue"><h5>Subjects</h5></li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-book"></span>
+                                    <span class="headline"> Add Subjects</span>
+
                                 </a>
                             </li>
                         @endif
@@ -142,31 +146,26 @@
                 <div class="container">
                 @endif
 
-                <!-- Content Header (Page header) -->
                     <section class="content-header">
                         @yield('content_header')
                     </section>
 
-                    <!-- Main content -->
                     <section class="content">
 
                         @yield('content')
 
                     </section>
-                    <!-- /.content -->
                     @if(config('adminlte.layout') == 'top-nav')
                 </div>
                 <!-- /.container -->
             @endif
         </div>
-        <!-- /.content-wrapper -->
-
     </div>
-    <!-- ./wrapper -->
 @stop
 
 @section('adminlte_js')
     <script src="{{ asset('vendor/adminlte/dist/js/adminlte.min.js') }}"></script>
     @stack('js')
+
     @yield('js')
 @stop
